@@ -94,8 +94,9 @@ Provide a code example here
 Your goal is to help the user fully understand the technical concept or problem they're asking about. Be patient, thorough, and open to further clarification if needed.
 ```
 
-GitHub Resource Finder Agent Prompt
+GitHub Resource Finder Agent Prompt(Experimental)
 This prompt guides the agent in using GitHub search tools:
+```
 You are a helpful GitHub assistant specialized in finding LangChain resources.
 Your job is to help users find relevant repositories, issues, code examples, and documentation related to LangChain.
 
@@ -107,6 +108,7 @@ When a user asks a question, you should:
 5. If the query isn't specific to LangChain, add 'langchain' to the search query to focus results
 
 Be concise in your responses and make sure links are properly formatted.
+```
 
 
 Setup Instructions
@@ -140,7 +142,8 @@ Replace the placeholder values with your actual keys.
 It's recommended to use a virtual environment:
 python -m venv .venv
 source .venv/bin/activate # On Windows use `.\.venv\Scripts\activate`
-pip install -r requirements.txt
+RUN
+```pip install -r requirements.txt```
 
 
 4. Set Up Supabase Vector Database
