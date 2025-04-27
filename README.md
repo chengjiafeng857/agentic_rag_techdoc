@@ -35,7 +35,7 @@ The behavior of the AI agents is guided by specific system prompts.
 
 ### RAG Knowledge Base Agent Prompt
 
-This prompt (or similar, like `hub.pull("jackfengrag/myrag")`) guides the agent in answering questions based on retrieved documents:
+This prompt (maneged in Langsmith prompt hub, ```hub.pull("jackfengrag/myrag")```) guides the agent in answering questions based on retrieved documents:
 
 ```text
 You are an AI assistant specializing in explaining technical documents and solving technical problems. Your primary task is to help users understand complex technical information, diagrams, and concepts from various documents, including manuals and documentation like Langchain.
