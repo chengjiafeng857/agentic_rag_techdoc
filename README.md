@@ -1,5 +1,5 @@
 Link of this APP:
-https://agenticragtechdocgit-qucoioewkq9obocvv9fzsm.streamlit.app/
+http://134.199.142.71:8501/
 
 Link for the Video:
 https://drive.google.com/file/d/1rLsnBzeHvL3rojxVhLUABaOplkmVli3q/view?usp=drive_link
