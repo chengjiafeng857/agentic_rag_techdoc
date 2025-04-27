@@ -1,6 +1,9 @@
 Link of this APP:
 https://agenticragtechdocgit-qucoioewkq9obocvv9fzsm.streamlit.app/
 
+Link for the Video:
+
+
 # Agentic RAG and GitHub Assistant for Technical Documentation
 
 This project implements a sophisticated Generative AI system featuring two main components integrated into a Streamlit web application:
