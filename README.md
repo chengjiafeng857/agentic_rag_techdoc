@@ -2,7 +2,7 @@ Link of this APP:
 https://agenticragtechdocgit-qucoioewkq9obocvv9fzsm.streamlit.app/
 
 Link for the Video:
-
+https://drive.google.com/file/d/1rLsnBzeHvL3rojxVhLUABaOplkmVli3q/view?usp=drive_link
 
 # Agentic RAG and GitHub Assistant for Technical Documentation
 
