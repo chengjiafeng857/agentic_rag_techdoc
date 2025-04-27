@@ -9,7 +9,7 @@ https://drive.google.com/file/d/1rLsnBzeHvL3rojxVhLUABaOplkmVli3q/view?usp=drive
 This project implements a sophisticated Generative AI system featuring two main components integrated into a Streamlit web application:
 
 1.  **Agentic RAG Knowledge Base:** Allows users to query a knowledge base built from technical documents (PDFs, Markdown, Jupyter Notebooks, etc.). It uses Retrieval-Augmented Generation (RAG) with LangChain agents to provide grounded answers based on the ingested content.
-2.  **GitHub Resource Finder:** An agent-based tool that helps users find relevant LangChain resources (repositories, issues, code, documentation links) directly from GitHub.
+2.  **GitHub Resource Finder:** An agent-based tool that helps users find relevant LangChain resources (repositories, issues, code, documentation links) directly from GitHub.(still in Development)
 
 ## Features
 
