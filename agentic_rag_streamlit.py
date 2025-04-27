@@ -214,19 +214,46 @@ if uploaded_files:
         documents = loader.load()
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
         docs = text_splitter.split_documents(documents)
-        # Ingest into vector store
-        try:
-            SupabaseVectorStore.from_documents(
-                docs,
-                embeddings,
-                client=supabase,
-                table_name="documents",
-                query_name="rag_query",
-                chunk_size=100,
-            )
-            st.success(f"Ingested {file_name} successfully!")
-        except Exception as e:
-            st.error(f"Failed to ingest {file_name}: {str(e)}")
+        # Ingest into vector store in batches of 10
+        batch_size = 3
+        for doc in docs:
+            doc.page_content = doc.page_content.replace('\u0000', '')
+        cleaned_docs = docs
+        num_batches = (len(cleaned_docs) + batch_size - 1) // batch_size
+        for batch_idx in range(num_batches):
+            batch_docs = cleaned_docs[batch_idx*batch_size:(batch_idx+1)*batch_size]
+            retry_count = 0
+            while retry_count < 3:
+                try:
+                    SupabaseVectorStore.from_documents(
+                        batch_docs,
+                        embeddings,
+                        client=supabase,
+                        table_name="documents",
+                        query_name="rag_query",
+                        chunk_size=100,
+                    )
+                    if retry_count > 0:
+                        st.info(f"Batch {batch_idx+1} for {file_name} succeeded after {retry_count} retries.")
+                    break  # Success, exit retry loop
+                except Exception as e:
+                    error_message = str(e)
+                    # Retry on SSL errors
+                    if any(kw in error_message.lower() for kw in ["ssl", "tls", "certificate", "handshake", "bad record"]):
+                        retry_count += 1
+                        st.warning(f"SSL error on batch {batch_idx+1} for {file_name}, retrying ({retry_count}/3)...")
+                        time.sleep(1)
+                        continue
+                    # Skip on duplicate errors
+                    if any(kw in error_message.lower() for kw in ["duplicate", "already exists", "unique constraint", "unique violation", "conflict"]):
+                        st.warning(f"Duplicate detected in batch {batch_idx+1} for {file_name}, skipping batch: {error_message}")
+                        break
+                    # Other errors: show and skip batch
+                    st.error(f"Error in batch {batch_idx+1} for {file_name}: {error_message}")
+                    break
+            else:
+                st.error(f"Failed to ingest batch {batch_idx+1} for {file_name} after 3 SSL retries.")
+        st.success(f"Ingested {file_name} in {num_batches} batches!")
 
 # create the bar where we can type messages
 user_question = st.chat_input("Ask me anything about LangChain...")
