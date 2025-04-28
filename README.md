@@ -129,15 +129,15 @@ cd <repository-directory-name>
 
 2. Set Up Environment Variables
 Create a .env file in the root directory of the project and add your credentials:
-# Supabase Credentials
+### Supabase Credentials
 `SUPABASE_URL="YOUR_SUPABASE_URL"`
 `SUPABASE_SERVICE_KEY="YOUR_SUPABASE_SERVICE_KEY"`
 
-# OpenAI API Key
+### OpenAI API Key
 `OPENAI_API_KEY="YOUR_OPENAI_API_KEY"`
 
-# GitHub Token (Optional - for higher rate limits)
-# Generate one here: [https://github.com/settings/tokens](https://github.com/settings/tokens)
+### GitHub Token (Optional - for higher rate limits)
+### Generate one here: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 `GITHUB_TOKEN="YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"`
 
 
