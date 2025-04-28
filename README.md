@@ -145,9 +145,10 @@ Create a .env file in the root directory of the project and add your credentials
 Replace the placeholder values with your actual keys.
 3. Install Dependencies
 It's recommended to use a virtual environment:
-python -m venv .venv
 
-`source .venv/bin/activate `# On Windows use `.\.venv\Scripts\activate`
+```python -m venv .venv```
+
+```source .venv/bin/activate ```# On Windows use ```.\.venv\Scripts\activate```
 
 RUN
 ```pip install -r requirements.txt```
