@@ -123,8 +123,8 @@ An OpenAI API Key
 (Optional but Recommended) A GitHub Personal Access Token (for higher API rate limits)
 1. Clone the Repository
 ```
-git clone <your-repository-url>
-cd <repository-directory-name>
+git clone https://github.com/chengjiafeng857/agentic_rag_techdoc.git
+cd agentic_rag_techdoc
 ```
 
 2. Set Up Environment Variables
