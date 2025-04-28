@@ -172,6 +172,7 @@ This will launch the web application in your browser. You can interact with the 
 If you want to run the standalone apps:
 RAG Assistant: streamlit run agentic_rag_streamlit.py
 GitHub Finder: streamlit run github_search_agent.py
+```
 File Structure
 ├── documents/              # Directory to place documents for ingestion (create if needed)
 │   └── docs/               # Subdirectory specifically used by ingest.ipynb
@@ -183,3 +184,4 @@ File Structure
 ├── ingest.ipynb            # Jupyter Notebook for ingesting MDX/IPYNB files
 ├── ingest_in_db.py         # Script for ingesting PDF/TXT files into Supabase
 ├── setup_vector_db.py      # Python script to set up Supabase tables
+```
