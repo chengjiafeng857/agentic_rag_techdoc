@@ -147,7 +147,7 @@ Replace the placeholder values with your actual keys.
 It's recommended to use a virtual environment:
 python -m venv .venv
 
-source .venv/bin/activate # On Windows use `.\.venv\Scripts\activate`
+`source .venv/bin/activate `# On Windows use `.\.venv\Scripts\activate`
 
 RUN
 ```pip install -r requirements.txt```
