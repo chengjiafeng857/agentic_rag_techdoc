@@ -145,33 +145,44 @@ Create a .env file in the root directory of the project and add your credentials
 Replace the placeholder values with your actual keys.
 3. Install Dependencies
 It's recommended to use a virtual environment:
+```
+python -m venv .venv
 
-```python -m venv .venv```
+source .venv/bin/activate 
 
-```source .venv/bin/activate ```# On Windows use ```.\.venv\Scripts\activate```
-
+# On Windows use .\.venv\Scripts\activate
+```
 RUN
-```pip install -r requirements.txt```
-
-
+```
+pip install -r requirements.txt
+```
 4. Set Up Supabase Vector Database
 Run the setup script to create the necessary tables and functions in your Supabase instance:
+```
 python setup_vector_db.py
-
+```
 
 Alternatively, you can manually run the SQL commands found in supabase_setup.sql using the Supabase SQL Editor.
 5. Ingest Data into the Knowledge Base
 Place the documents you want to ingest into a directory named documents in the project root.
 For PDF/TXT/MD files: You can use the upload feature in the Streamlit app (agentic_rag_streamlit.py or combined_langchain_assistant.py) after launching it, or run the ingest_in_db.py script (ensure it points to your documents folder).
 # Example using the script (modify ingest_in_db.py if needed)
-# python ingest_in_db.py
-
+```
+python ingest_in_db.py
+```
 
 For MDX/IPYNB files (and others): Use the Jupyter Notebook ingest.ipynb. Run the cells in the notebook to load, process, and store these specific file types. Make sure your documents are in the documents/docs subdirectory as configured in the notebook, or adjust the paths accordingly.
 Usage
-To run the combined Streamlit application:
-streamlit run combined_langchain_assistant.py
 
+To run the agentic rag Streamlit application:
+```
+streamlit run agentic_rag_streamlit.py
+```
+
+To run the combined Streamlit application:
+```
+streamlit run combined_langchain_assistant.py
+```
 
 This will launch the web application in your browser. You can interact with the RAG Knowledge Base in the first tab and the GitHub Resource Finder in the second tab.
 If you want to run the standalone apps:
