@@ -131,6 +131,7 @@ cd <repository-directory-name>
 Create a .env file in the root directory of the project and add your credentials:
 ### Supabase Credentials
 `SUPABASE_URL="YOUR_SUPABASE_URL"`
+
 `SUPABASE_SERVICE_KEY="YOUR_SUPABASE_SERVICE_KEY"`
 
 ### OpenAI API Key
