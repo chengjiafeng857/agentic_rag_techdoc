@@ -1,7 +1,7 @@
 Link of this APP:
 http://134.199.142.71:8501/
 
-Link for the Video:
+Link for explantion Video:
 https://drive.google.com/file/d/1rLsnBzeHvL3rojxVhLUABaOplkmVli3q/view?usp=drive_link
 
 # Agentic RAG and GitHub Assistant for Technical Documentation
