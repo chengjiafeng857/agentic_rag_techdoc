@@ -1,5 +1,5 @@
 Link to demo:
-http://134.199.142.71:8501/
+http://134.199.142.71
 
 Link for explantion Video:
 https://drive.google.com/file/d/1rLsnBzeHvL3rojxVhLUABaOplkmVli3q/view?usp=drive_link
