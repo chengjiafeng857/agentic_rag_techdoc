@@ -1,4 +1,4 @@
-Link of this APP:
+Link to demo:
 http://134.199.142.71:8501/
 
 Link for explantion Video:
